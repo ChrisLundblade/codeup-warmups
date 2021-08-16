@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Filter Bob Warmup</title>
+</head>
+<body>
+  <script>
+    "use strict";
+    // Create a function, filterOutBobUsers, that takes in an array of user objects with firstName and lastName properties and returns an array of user objects without any Bob users. The case of the Bob names does not matter.
+    var users = [
+      {
+        firstName: 'bob',
+        lastName: 'Smith'
+      },
+      {
+        firstName: 'BOB',
+        lastName: 'Smith'
+      },
+      {
+        firstName: 'Fred',
+        lastName: 'Smith'
+      },
+      {
+        firstName: 'Cathy',
+        lastName: 'Smith'
+      },
+      {
+        firstName: 'Dawn',
+        lastName: 'Smith'
+      }
+    ]
+    function filterOutBobUsers(arrObj){
+      let newArr = []
+      for (let i =1; i < arrObj.length; i++){
+        if (arrObj[i].firstName.toLowerCase() === 'bob'){
+
+        }
+        else{
+          newArr.push(arrObj[i]);
+        }
+      }
+      return newArr;
+    }
+
+    console.log(filterOutBobUsers(users));
+
+    users.forEach(function(arrObj){
+      let newArr = []
+    })
+
+	//Joe Congdon's ForEach Solution
+    // function filterOutBobUsers(users){
+    //     let outputUsers = [];
+    //     users.forEach((user) => {
+    //         if(user.firstName.toLowerCase() !== 'bob'){
+    //             outputUsers.push(user);
+    //         }
+    //     })
+	//
+    //     return outputUsers;
+	//
+    // }
+
+
+    // filterOutBobUsers(users) // returns...
+    //
+    //         [
+    //         {
+    //           firstName: 'Fred',
+    //           lastName: 'Smith'
+    //         },
+    //                 {
+    //                   firstName: 'Cathy',
+    //                   lastName: 'Smith'
+    //                 },
+    //                 {
+    //                   firstName: 'Dawn',
+    //                   lastName: 'Smith'
+    //                 }
+    //         ]
+
+
+  </script>
+</body>
+</html>

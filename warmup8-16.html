@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>DOM Warmups</title>
+</head>
+<body>
+<h1 id="goodMorning">Good Morning, Draco!</h1>
+<button id="afternoon" onclick="changeHeader()">It's afternoon</button>
+<script>
+  var header = document.getElementById("goodMorning");
+  function changeHeader(){
+    if(header.innerText === "Good Morning, Draco!"){
+      header.innerText = "Good afternoon, Draco.";
+    } else {
+      header.innerText = "Good Morning, Draco!"
+    }
+  }
+</script>
+</body>
+</html>

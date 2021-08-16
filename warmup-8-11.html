@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Javiers Weird Number Processing</title>
+</head>
+<body>
+  <script>
+    // Create a function called processNumber
+    // Takes one parameter that should be numeric - should handle both a number and a numeric string
+    // Starting from the original number, double the value of every other digit
+    // Then add the values of the individual digits together
+    // If the doubled value now has two digits, add the digits individually
+    // Return the resulting number
+    // If passed the number 176248, it should return 27
+    // If passed the number 1762483, it should return 30
+    function processNumber(inputNum){
+      let processArr = inputNum.toString().split("");
+      var processedNum;
+      for (let i=0; i < processArr.toString().length; i++){
+        if(i % 2 == 0){
+          processedNum += parseFloat(processArr[i]);
+          } else{
+            if((processArr[i]*2) > 10){
+				processedNum += ((processArr[i]*2)%10);
+				//processedNum += ((processArr[i]*2));
+          }else{
+
+			}
+        }
+      }
+        for (i=0; i < processArr.length; i++){
+
+        }
+        return processedNum;
+    }
+
+  </script>
+</body>
+</html>
